@@ -16,7 +16,6 @@ The system is designed to:
 - Redis – Low-latency cache for storing and retrieving the latest sensor data.
 - Docker – Containerized setup for easy local deployment.
 - PostgreSQL / TimescaleDB – Persistent storage of logs for analytics and historical queries.
-- (Optional) Apache Flink or Spark Structured Streaming – For advanced real-time stream processing and anomaly detection.
 - Grafana + Prometheus – Dashboarding and visualization of car telemetry in real time.
 
 ## Features
@@ -35,7 +34,7 @@ The system is designed to:
 - Redis
 - Kafka or Redpanda
 
-### Setup (Do not proceed, under active development)
+### Setup
 1. Clone the repo:
 ```commandline
 git clone https://github.com/aust21/car-logs.git
@@ -45,6 +44,10 @@ cd car-logs
 ```commandline
 docker-compose up -d
 ```
+    Check services:  
+        TimescaleDB → localhost:5432 (user: admin, pass: admin, db: carlogs)  
+        Prometheus → http://localhost:9090  
+        Grafana → http://localhost:3000(admin/admin)
 3. Run the consumer (processes and stores sensor logs):
 ```commandline
 python consumer.py
