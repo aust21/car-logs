@@ -48,6 +48,8 @@ docker-compose up -d
         TimescaleDB → localhost:5432 (user: admin, pass: admin, db: carlogs)  
         Prometheus → http://localhost:9090  
         Grafana → http://localhost:3000(admin/admin)
+ ---
+## _Do not proceed_
 3. Run the consumer (processes and stores sensor logs):
 ```commandline
 python consumer.py
